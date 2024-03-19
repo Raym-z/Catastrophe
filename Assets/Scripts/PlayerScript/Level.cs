@@ -36,7 +36,7 @@ public class Level : MonoBehaviour
 
     internal void AddUpgradesIntoTheListOfAvailableUpgrades(List<UpgradeData> upgradesToAdd)
     {
-        if(upgradesToAdd == null ) { return; }
+        if (upgradesToAdd == null) { return; }
         this.upgrades.AddRange(upgradesToAdd);
     }
 
@@ -107,21 +107,30 @@ public class Level : MonoBehaviour
         experienceBar.SetLevelText(level);
     }
 
+    public void ShuffleUpgrades()
+    {
+        for (int i = upgrades.Count - 1; i > 0; i--)
+        {
+            int j = UnityEngine.Random.Range(0, i + 1);
+            UpgradeData shuffleElement = upgrades[i];
+            upgrades[i] = upgrades[j];
+            upgrades[j] = shuffleElement;
+        }
+    }
+
     public List<UpgradeData> GetUpgrades(int count)
     {
+        ShuffleUpgrades();
         List<UpgradeData> upgradeList = new List<UpgradeData>();
 
         if (count > upgrades.Count)
         {
             count = upgrades.Count;
         }
-        // Debug.Log($"count: {count}");
         for (int i = 0; i < count; i++)
         {
-            // Debug.Log($"i: {i}");
             upgradeList.Add(upgrades[UnityEngine.Random.Range(0, upgrades.Count)]);
         }
-        // Debug.Log($"listnum: {upgradeList.Count}");
         return upgradeList;
     }
 }

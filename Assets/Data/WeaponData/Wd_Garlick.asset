@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25103297be4190d4eb35047db30ef5c2, type: 3}
   m_Name: Wd_Garlick
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Garlick
   stats:
     damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
+    criticalChance: 0
+    numberOfHits: 0
+    projectileSpeed: 0
+    stun: 0
   weaponBasePrefab: {fileID: 0}
   upgrades: []

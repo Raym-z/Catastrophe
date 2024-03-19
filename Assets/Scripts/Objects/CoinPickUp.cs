@@ -10,4 +10,3 @@ public class CoinPickUp : MonoBehaviour, IPickUpObject
         character.coins.Add(amount);
     }
 }
-  

@@ -5604,7 +5604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectsContainer: {fileID: 2136402376}
-  startingWeapon: {fileID: 11400000, guid: c02195049a7d68c4c824140dc055db4b, type: 2}
+  startingWeapon: {fileID: 11400000, guid: f7dc8eb62389881498e3c65ba767eaae, type: 2}
 --- !u!1 &1103509151
 GameObject:
   m_ObjectHideFlags: 0
@@ -10284,7 +10284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -28.6}
+  m_AnchoredPosition: {x: 0, y: -28.599976}
   m_SizeDelta: {x: 330.9215, y: 56.6867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1674386898

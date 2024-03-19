@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25103297be4190d4eb35047db30ef5c2, type: 3}
   m_Name: wd_Gun
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Gun
   stats:
-    damage: 0
-    timeToAttack: 0
-    numberOfAttacks: 0
-  weaponBasePrefab: {fileID: 0}
+    damage: 10
+    timeToAttack: 1
+    numberOfAttacks: 1
+    criticalChance: 0
+    numberOfHits: 1
+    projectileSpeed: 20
+    stun: 0
+  weaponBasePrefab: {fileID: 2271571774681003875, guid: ce997660e7d31164dbd3ae20b68cd5bb, type: 3}
   upgrades: []

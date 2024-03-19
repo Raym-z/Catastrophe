@@ -10,22 +10,31 @@ public class WeaponStats
     public int damage;
     public float timeToAttack;
     public int numberOfAttacks;
-    // public float CriticalChance;
+    public float criticalChance;
+    public int numberOfHits;
+    public float projectileSpeed;
+    public float stun;
 
-    public WeaponStats(int damage, float timeToAttack, int numberOfAttacks)
+    public WeaponStats(WeaponStats stats)
     {
-        this.damage = damage;
-        this.timeToAttack = timeToAttack;
-        this.numberOfAttacks = numberOfAttacks;
+        this.damage = stats.damage;
+        this.timeToAttack = stats.timeToAttack;
+        this.numberOfAttacks = stats.numberOfAttacks;
+        this.criticalChance = stats.criticalChance;
+        this.numberOfHits = stats.numberOfHits;
+        this.projectileSpeed = stats.projectileSpeed;
+        this.stun = stats.stun;
     }
-
-
 
     internal void Sum(WeaponStats weaponUpgradeStats)
     {
         this.damage += weaponUpgradeStats.damage;
         this.timeToAttack += weaponUpgradeStats.timeToAttack;
         this.numberOfAttacks += weaponUpgradeStats.numberOfAttacks;
+        this.criticalChance += weaponUpgradeStats.criticalChance;
+        this.numberOfHits += weaponUpgradeStats.numberOfHits;
+        this.projectileSpeed += weaponUpgradeStats.projectileSpeed;
+        this.stun += weaponUpgradeStats.stun;
     }
 
 }

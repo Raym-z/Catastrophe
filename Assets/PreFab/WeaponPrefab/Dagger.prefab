@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6055394181744195869}
   - component: {fileID: 5122470773662647383}
-  - component: {fileID: 1401714267128140755}
+  - component: {fileID: -1483256203878432461}
   m_Layer: 0
   m_Name: Dagger
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1401714267128140755
+--- !u!114 &-1483256203878432461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7658516870333021932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab20c61dc3f81b2469447acc0f02cbd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 973629df9eccdea4989d452195b10d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 1
+  attackArea: 0.1
+  criticalChance: 0

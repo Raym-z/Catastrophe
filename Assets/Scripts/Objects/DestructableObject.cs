@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DestructableObject : MonoBehaviour, IDamageable
 {
+
+    public void Stun(float Stun)
+    {
+
+    }
     public void TakeDamage(int damage)
     {
         Destroy(gameObject);

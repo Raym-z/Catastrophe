@@ -244,9 +244,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: c02195049a7d68c4c824140dc055db4b, type: 2}
   weaponStats:
-    damage: 0
-    timeToAttack: 0
-    numberOfAttacks: 0
+    damage: 10
+    timeToAttack: 1
+    numberOfAttacks: 1
+    criticalChance: 0
+    numberOfHits: 1
+    projectileSpeed: 0
+    stun: 10
   timer: 0
   vectorOfAttack: {x: 0, y: 0}
   attackDirection: 2

@@ -34,10 +34,22 @@ public class Enemy : MonoBehaviour, IDamageable
     Rigidbody2D rgdbd2d;
 
     public EnemyStats stats;
+    [SerializeField] EnemyData enemyData;
+    float stunned;
 
     private void Awake()
     {
         rgdbd2d = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        if (enemyData != null)
+        {
+            InitSprite(enemyData.animatedPrefab);
+            SetStats(enemyData.stats);
+            SetTarget(GameManager.instance.playerTransform.gameObject);
+        }
     }
 
     public void SetTarget(GameObject target)
@@ -48,6 +60,13 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
+        if (stunned > 0)
+        {
+            rgdbd2d.velocity = Vector2.zero;
+            stunned -= Time.fixedDeltaTime;
+            return;
+        }
+
         Vector3 direction = (targetDestination.position - transform.position).normalized;
         rgdbd2d.velocity = direction * stats.movementSpeed;
     }
@@ -96,4 +115,15 @@ public class Enemy : MonoBehaviour, IDamageable
         stats.ApplyProgress(progress);
     }
 
+    internal void InitSprite(GameObject animatedPrefab)
+    {
+        GameObject spriteObject = Instantiate(animatedPrefab);
+        spriteObject.transform.parent = transform;
+        spriteObject.transform.localPosition = Vector3.zero;
+    }
+
+    public void Stun(float stun)
+    {
+        stunned = stun;
+    }
 }
