@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6bce819f283e1419e86ae429b15d17, type: 3}
+  m_Name: Test ARMOR
+  m_EditorClassIdentifier: 
+  Name: Armor
+  stats:
+    armor: 10
+  upgrades:
+  - {fileID: 11400000, guid: 577f5a1abbb0bf74c9ab0c1f1554c56c, type: 2}

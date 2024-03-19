@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a8ed0e7ca3cb84997b1246cb634b77, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: 
+  coins: 0
+  stageCompletion: 00
+  upgrades:
+  - persistentUpgrades: 0
+    level: 0
+    max_level: 10
+    costToUpgrade: 100
+  - persistentUpgrades: 1
+    level: 0
+    max_level: 10
+    costToUpgrade: 100
+  - persistentUpgrades: 3
+    level: 0
+    max_level: 10
+    costToUpgrade: 100
+  - persistentUpgrades: 2
+    level: 0
+    max_level: 10
+    costToUpgrade: 100
+  - persistentUpgrades: 4
+    level: 0
+    max_level: 10
+    costToUpgrade: 100
+  - persistentUpgrades: 5
+    level: 0
+    max_level: 10
+    costToUpgrade: 100

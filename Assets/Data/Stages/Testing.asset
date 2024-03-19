@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58745e12297e10949b67bfc981594979, type: 3}
+  m_Name: Testing
+  m_EditorClassIdentifier: 
+  stageEvents:
+  - eventType: 3
+    time: 10
+    message: You Won the Stage
+    enemyToSpawn: {fileID: 0}
+    objectToSpawn: {fileID: 0}
+    Count: 0

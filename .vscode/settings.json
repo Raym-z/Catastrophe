@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "C:/Users/Think/OneDrive/Desktop/Code/Catastrophe/Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/COMIntegration/COMIntegration~",
+    "dotnet.preferCSharpExtension": true,
+    "files.exclude": {
+        "**/*.meta": true
+    },
+    "dotnet.defaultSolution": "Catastrophe-main.sln"
+}

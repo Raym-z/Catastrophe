@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122fa2f18bfedeb4daab78889b6af5f5, type: 3}
+  m_Name: CactusZombieData
+  m_EditorClassIdentifier: 
+  Name: Cactus Zombie
+  animatedPrefab: {fileID: 2177117104708675493, guid: a80115f49efabbb408e665e5d02a1c4a, type: 3}
+  stats:
+    hp: 20
+    damage: 10
+    movementSpeed: 4
