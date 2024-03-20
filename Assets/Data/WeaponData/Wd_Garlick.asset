@@ -21,5 +21,7 @@ MonoBehaviour:
     numberOfHits: 0
     projectileSpeed: 0
     stun: 0
-  weaponBasePrefab: {fileID: 0}
+    knockback: 0
+    knockbackTimeWeight: 0
+  weaponBasePrefab: {fileID: 753988439953606123, guid: 677e6361318373b45a4327f32d1ed81e, type: 3}
   upgrades: []

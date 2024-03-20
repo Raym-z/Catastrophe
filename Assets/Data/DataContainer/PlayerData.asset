@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a8ed0e7ca3cb84997b1246cb634b77, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: 100
   stageCompletion: 00
   upgrades:
   - persistentUpgrades: 0
-    level: 0
+    level: 10
     max_level: 10
     costToUpgrade: 100
   - persistentUpgrades: 1

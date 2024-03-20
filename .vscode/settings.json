@@ -4,5 +4,5 @@
     "files.exclude": {
         "**/*.meta": true
     },
-    "dotnet.defaultSolution": "Catastrophe-main.sln"
+    "dotnet.defaultSolution": "Catastrophe.sln"
 }

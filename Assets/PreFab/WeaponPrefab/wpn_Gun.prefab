@@ -44,11 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6efc4ca7ecc6d8047abd893a20bc0b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: f7dc8eb62389881498e3c65ba767eaae, type: 2}
   weaponStats:
     damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
+    criticalChance: 0
+    numberOfHits: 0
+    projectileSpeed: 0
+    stun: 0
+    knockback: 0
+    knockbackTimeWeight: 0
   timer: 0
   vectorOfAttack: {x: 0, y: 0}
   attackDirection: 1

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -36,6 +37,9 @@ public class Enemy : MonoBehaviour, IDamageable
     public EnemyStats stats;
     [SerializeField] EnemyData enemyData;
     float stunned;
+    UnityEngine.Vector3 knockbackVector;
+    float knockbackForce;
+    float knockbackTimeWeight;
 
     private void Awake()
     {
@@ -60,15 +64,39 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
-        if (stunned > 0)
-        {
-            rgdbd2d.velocity = Vector2.zero;
-            stunned -= Time.fixedDeltaTime;
-            return;
-        }
+        ProcessStun();
+        Move();
+    }
 
-        Vector3 direction = (targetDestination.position - transform.position).normalized;
-        rgdbd2d.velocity = direction * stats.movementSpeed;
+    private void ProcessStun()
+    {
+        if (stunned > 0f)
+        {
+            stunned -= Time.fixedDeltaTime;
+        }
+    }
+
+
+    private void Move()
+    {
+        if (stunned > 0f) { return; }
+        UnityEngine.Vector3 direction = (targetDestination.position - transform.position).normalized;
+        rgdbd2d.velocity = CalculateMovementVelocity(direction) + CalculateKnockback();
+    }
+
+    private UnityEngine.Vector3 CalculateMovementVelocity(UnityEngine.Vector3 direction)
+    {
+        return direction * stats.movementSpeed * (stunned > 0f ? 0f : 1f);
+    }
+
+
+    public UnityEngine.Vector3 CalculateKnockback()
+    {
+        if (knockbackTimeWeight > 0f)
+        {
+            knockbackTimeWeight -= Time.fixedDeltaTime;
+        }
+        return knockbackVector * knockbackForce * (knockbackTimeWeight > 0f ? 1f : 0f);
     }
 
     internal void SetStats(EnemyStats stats)
@@ -119,11 +147,18 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         GameObject spriteObject = Instantiate(animatedPrefab);
         spriteObject.transform.parent = transform;
-        spriteObject.transform.localPosition = Vector3.zero;
+        spriteObject.transform.localPosition = UnityEngine.Vector3.zero;
     }
 
     public void Stun(float stun)
     {
         stunned = stun;
+    }
+
+    public void Knockback(UnityEngine.Vector3 vector, float force, float timeWeight)
+    {
+        knockbackVector = vector;
+        knockbackForce = force;
+        knockbackTimeWeight = timeWeight;
     }
 }

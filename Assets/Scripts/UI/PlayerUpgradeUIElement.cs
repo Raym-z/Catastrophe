@@ -32,10 +32,10 @@ public class PlayerUpgradeUIElement : MonoBehaviour
 
     void UpdateElement()
     {
-        PlayerUpgrades playerUpgrade = dataContainer.upgrades[(int)upgrade];
+        PlayerUpgrades playerUpgrades = dataContainer.upgrades[(int)upgrade];
 
         upgradeName.text = upgrade.ToString();
-        level.text = "Level " + playerUpgrade.level.ToString();
-        price.text = "Price : " + playerUpgrade.costToUpgrade.ToString();
+        level.text = "Level " + playerUpgrades.level.ToString();
+        price.text = "Price : " + playerUpgrades.costToUpgrade.ToString();
     }
 }

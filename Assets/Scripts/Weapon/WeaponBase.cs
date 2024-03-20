@@ -64,13 +64,14 @@ public abstract class WeaponBase : MonoBehaviour
     {
         PostDamage(damage, position, crit);
         temp.TakeDamage(damage);
-        ApplyAddiotionalEffect(temp);
+        ApplyAddiotionalEffect(temp, position);
     }
 
 
-    private void ApplyAddiotionalEffect(IDamageable temp)
+    private void ApplyAddiotionalEffect(IDamageable temp, Vector3 enemyPosition)
     {
         temp.Stun(weaponStats.stun);
+        temp.Knockback((enemyPosition - transform.position).normalized, weaponStats.knockback, weaponStats.knockbackTimeWeight);
     }
 
 
@@ -142,6 +143,12 @@ public abstract class WeaponBase : MonoBehaviour
 
         Projectile projectile = projectileGO.GetComponent<Projectile>();
         projectile.SetDirection(vectorOfAttack.x, vectorOfAttack.y);
+        if (vectorOfAttack.x < 0)
+        {
+            projectile.transform.eulerAngles = new Vector3(0, 180, Mathf.Atan2(vectorOfAttack.y, vectorOfAttack.x) * Mathf.Rad2Deg) * -1;
+        }
+        else
+            projectile.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(vectorOfAttack.y, vectorOfAttack.x) * Mathf.Rad2Deg);
         projectile.SetStats(this);
 
         return projectileGO;
