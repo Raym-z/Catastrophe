@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6712849588991252592}
   - component: {fileID: 6727767869747313495}
-  - component: {fileID: 7820906760351057019}
-  m_Layer: 0
+  - component: {fileID: 1866819462737248238}
+  m_Layer: 7
   m_Name: cactus1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7820906760351057019
-BoxCollider2D:
+--- !u!60 &1866819462737248238
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04466334, y: -0.037431}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,6 +127,23 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.52415997, y: 0.71925306}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.18330383, y: 0.1328404}
+      - {x: 0.09093571, y: 0.13892964}
+      - {x: 0.07005501, y: 0.02784571}
+      - {x: 0.04343605, y: 0.0193353}
+      - {x: 0.048443794, y: 0.18627948}
+      - {x: 0.040787697, y: 0.24075916}
+      - {x: 0.0028429031, y: 0.26079607}
+      - {x: -0.09639168, y: 0.27177578}
+      - {x: -0.115358576, y: 0.2516486}
+      - {x: -0.19138002, y: 0.21439052}
+      - {x: -0.21863773, y: 0.18041217}
+      - {x: -0.24548367, y: 0.05383514}
+      - {x: -0.16257617, y: 0.009977376}
+      - {x: -0.14010188, y: -0.09007919}
+      - {x: -0.09016064, y: -0.0908595}
+      - {x: 0.059873953, y: -0.0908595}
+      - {x: 0.18342297, y: -0.03401354}
+  m_UseDelaunayMesh: 0

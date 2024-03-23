@@ -27,7 +27,6 @@ public class ObjectPool : MonoBehaviour
         }
         pool.Add(mainObject);
         PoolMember poolMember = mainObject.AddComponent<PoolMember>();
-        poolMember.SetDefaultRotation(mainObject.transform.rotation);
         poolMember.Set(this);
     }
 
@@ -47,5 +46,9 @@ public class ObjectPool : MonoBehaviour
     {
         gameObject.SetActive(false);
         pool.Add(gameObject);
+    }
+
+    private void OnDisable() {
+        
     }
 }

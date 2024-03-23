@@ -19,7 +19,7 @@ MonoBehaviour:
     numberOfAttacks: 1
     criticalChance: 0
     numberOfHits: 1
-    projectileSpeed: 5
+    projectileSpeed: 25
     stun: 0
     knockback: 0
     knockbackTimeWeight: 0

@@ -12,36 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a8ed0e7ca3cb84997b1246cb634b77, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  coins: 2130
+  coins: 0
   stageCompletion: 00
   upgrades:
   - persistentUpgrades: 0
-    level: 3
+    level: 0
     max_level: 10
     costToUpgrade: 100
     description: Add 10% max hp per level.
   - persistentUpgrades: 1
-    level: 4
+    level: 0
     max_level: 10
     costToUpgrade: 100
     description: Add 10% damage per level.
   - persistentUpgrades: 3
-    level: 2
+    level: 0
     max_level: 10
     costToUpgrade: 100
     description: Increase self-regeneration rate.
   - persistentUpgrades: 2
-    level: 1
+    level: 0
     max_level: 10
     costToUpgrade: 100
     description: Increase movement by 0.5% per level.
   - persistentUpgrades: 4
-    level: 7
+    level: 0
     max_level: 10
     costToUpgrade: 100
     description: Reduce incoming damage.
   - persistentUpgrades: 5
-    level: 10
+    level: 0
     max_level: 10
     costToUpgrade: 100
     description: Increase critical chance by 5% per level.

@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58745e12297e10949b67bfc981594979, type: 3}
-  m_Name: Testing
+  m_Script: {fileID: 11500000, guid: 122fa2f18bfedeb4daab78889b6af5f5, type: 3}
+  m_Name: JellyFishMiniBossData
   m_EditorClassIdentifier: 
-  stageEvents:
-  - eventType: 3
-    time: 10
-    message: You Won the Stage
-    enemyToSpawn: {fileID: 0}
-    objectToSpawn: {fileID: 0}
-    Count: 0
+  Name: Jellyfish Mini Boss
+  poolObjectData: {fileID: 11400000, guid: 2e8140d9ec4774542b04dd57eafc3c2b, type: 2}
+  stats:
+    hp: 50
+    damage: 20
+    movementSpeed: 7

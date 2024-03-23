@@ -155,11 +155,13 @@ public abstract class WeaponBase : MonoBehaviour
             projectile.transform.eulerAngles = new Vector3(0, 180, Mathf.Atan2(vectorOfAttack.y, vectorOfAttack.x) * Mathf.Rad2Deg) * -1;
         }
         else
+        {
             projectile.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(vectorOfAttack.y, vectorOfAttack.x) * Mathf.Rad2Deg);
+        }
         projectile.SetStats(this);
 
         return projectileGO;
     }
-    
+
 }
 

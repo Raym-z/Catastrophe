@@ -8,12 +8,14 @@ public class Level : MonoBehaviour
 {
     int experience = 0;
     public int level = 1;
+    StageProgress stageProgress;
 
     [SerializeField] EXPBar experienceBar;
     [SerializeField] UpgradePanelManager upgradePanel;
 
     [SerializeField] List<UpgradeData> upgrades;
     List<UpgradeData> selectedUpgrades;
+    [SerializeField] UpgradeData defaultUpgrade;
 
     [SerializeField] List<UpgradeData> acquiredUpgrades;
 
@@ -27,6 +29,7 @@ public class Level : MonoBehaviour
     {
         weaponManager = GetComponent<WeaponManager>();
         passiveItems = GetComponent<PassiveItems>();
+        stageProgress = FindObjectOfType<StageProgress>();
     }
 
     int TO_LEVEL_UP
@@ -54,7 +57,7 @@ public class Level : MonoBehaviour
 
     public void AddExperience(int amount)
     {
-        experience += amount;
+        experience += amount * (int)stageProgress.EXPMultiplier;
         CheckLevelUp();
         experienceBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
     }
@@ -131,7 +134,7 @@ public class Level : MonoBehaviour
 
         if (count > upgrades.Count)
         {
-            count = upgrades.Count;
+            upgradeList.Add(defaultUpgrade);
         }
         for (int i = 0; i < count; i++)
         {

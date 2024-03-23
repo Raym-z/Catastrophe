@@ -32,5 +32,16 @@ public class SoundMixerManager : MonoBehaviour
     {
         panelSound.SetActive(false);
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (panelSound.activeInHierarchy == true)
+            {
+                ClosePanelSound();
+            }
+
+        }
+    }
 
 }

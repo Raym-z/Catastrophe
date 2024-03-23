@@ -31,7 +31,7 @@ public class EnemiesSpawnGroup
 }
 public class EnemiesManager : MonoBehaviour
 {
-    [SerializeField] StagePorgress stageProgress;
+    [SerializeField] StageProgress stageProgress;
     [SerializeField] PoolManager poolManager;
     [SerializeField] EnemyData enemyBoss;
     [SerializeField] Vector2 spawnArea;
@@ -54,7 +54,7 @@ public class EnemiesManager : MonoBehaviour
     {
         player = GameManager.instance.playerTransform.gameObject;
         bossHealthBar = FindObjectOfType<BossHPBar>(true).GetComponent<Slider>();
-        stageProgress = FindObjectOfType<StagePorgress>();
+        stageProgress = FindObjectOfType<StageProgress>();
     }
     // 
     private void Update()

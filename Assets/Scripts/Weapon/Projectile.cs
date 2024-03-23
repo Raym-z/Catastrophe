@@ -22,11 +22,18 @@ public class Projectile : MonoBehaviour, IPoolMember
     {
         direction = new Vector3(dir_x, dir_y);
 
-        if (dir_x < 0)
+        if (dir_x < 0f)
         {
             Vector3 scale = transform.localScale;
-            scale.x = scale.x * -1;
+            scale.x = -2;
             transform.localScale = scale;
+        }
+        else
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = 2;
+            transform.localScale = scale;
+
         }
     }
     void Update()
@@ -91,6 +98,7 @@ public class Projectile : MonoBehaviour, IPoolMember
         if (ttl < 0f)
         {
             DestroyProjectile();
+            enemiesHit.Clear();
         }
     }
     private void DestroyProjectile()

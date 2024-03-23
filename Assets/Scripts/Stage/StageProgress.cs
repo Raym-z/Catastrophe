@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StagePorgress : MonoBehaviour
+public class StageProgress : MonoBehaviour
 {
     StageTime stageTime;
     private void Awake()
@@ -18,6 +18,13 @@ public class StagePorgress : MonoBehaviour
         get
         {
             return 1f + stageTime.time / progressTimeRate * progressPerSplit;
+        }
+    }
+    public float EXPMultiplier
+    {
+        get
+        {
+            return 1f + stageTime.time / progressTimeRate * (progressPerSplit / 2);
         }
     }
 }

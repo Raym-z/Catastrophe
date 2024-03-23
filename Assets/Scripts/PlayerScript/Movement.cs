@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private AudioClip characterMoveSoundClip;
+    // [SerializeField] private AudioClip characterMoveSoundClip;
     Rigidbody2D rgb2d;
 
     [HideInInspector]
@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
 
         if (movementVector.x != 0 || movementVector.y != 0)
         {
-            if (Time.frameCount % 60 == 0) { SFXManager.instance.PlaySoundFXClip(characterMoveSoundClip, transform, 1f); }
+            // if (Time.frameCount % 60 == 0) { SFXManager.instance.PlaySoundFXClip(characterMoveSoundClip, transform, 1f); }
             lastHorizontalCoupledVector = movementVector.x;
             lastVerticalCoupledVector = movementVector.y;
         }
