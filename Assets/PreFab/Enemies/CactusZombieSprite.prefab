@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7327136442020651667}
   - component: {fileID: 4903230776748751362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CactusZombieSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 677786210, guid: 310297a02bd0b5145ac8337f2f554ba1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

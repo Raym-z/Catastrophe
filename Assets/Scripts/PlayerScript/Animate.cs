@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,7 @@ public class Animate : MonoBehaviour
 
     public float horizontal;
     public float vertical;
-    private void Awake()
-    {
-        animator = GetComponentInChildren<Animator>();
-    }
+
 
     private void Update()
     {
@@ -19,4 +17,10 @@ public class Animate : MonoBehaviour
         // animator.SetFloat("Vertical", vertical);
         animator.SetBool("IsMoving", horizontal != 0 || vertical != 0);
     }
+
+    internal void SetAnimate(GameObject animObject)
+    {
+        animator = animObject.GetComponent<Animator>();
+    }
+
 }

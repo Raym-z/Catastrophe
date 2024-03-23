@@ -26,7 +26,7 @@ public class EnemyStats
     }
 }
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Enemy : MonoBehaviour, IDamageable, IPoolMember
 {
     Transform targetDestination;
     Character targetCharacter;
@@ -40,21 +40,23 @@ public class Enemy : MonoBehaviour, IDamageable
     UnityEngine.Vector3 knockbackVector;
     float knockbackForce;
     float knockbackTimeWeight;
+    PoolMember poolMember;
+
 
     private void Awake()
     {
         rgdbd2d = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    /*private void Start()
     {
         if (enemyData != null)
         {
-            InitSprite(enemyData.animatedPrefab);
+            // InitSprite(enemyData.animatedPrefab);
             SetStats(enemyData.stats);
             SetTarget(GameManager.instance.playerTransform.gameObject);
         }
-    }
+    }*/
 
     public void SetTarget(GameObject target)
     {
@@ -133,22 +135,30 @@ public class Enemy : MonoBehaviour, IDamageable
 
         if (stats.hp < 1)
         {
-            GetComponent<DropOnDestroy>().CheckDrop();
+            Defeated();
+        }
+    }
+
+    private void Defeated()
+    {
+        GetComponent<DropOnDestroy>().CheckDrop();
+        if (poolMember != null)
+        {
+            
+            poolMember.ReturnToPool();
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }
+
 
     internal void UpdateStatsForProgress(float progress)
     {
         stats.ApplyProgress(progress);
     }
 
-    internal void InitSprite(GameObject animatedPrefab)
-    {
-        GameObject spriteObject = Instantiate(animatedPrefab);
-        spriteObject.transform.parent = transform;
-        spriteObject.transform.localPosition = UnityEngine.Vector3.zero;
-    }
 
     public void Stun(float stun)
     {
@@ -160,5 +170,10 @@ public class Enemy : MonoBehaviour, IDamageable
         knockbackVector = vector;
         knockbackForce = force;
         knockbackTimeWeight = timeWeight;
+    }
+
+    public void SetPoolMember(PoolMember poolMember)
+    {
+        this.poolMember = poolMember;
     }
 }

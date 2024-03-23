@@ -10,7 +10,7 @@ public enum DirectionOfAttack
 
 public abstract class WeaponBase : MonoBehaviour
 {
-    Movement playerMove;
+    public Movement playerMove;
     public WeaponData weaponData;
 
     public WeaponStats weaponStats;
@@ -21,6 +21,8 @@ public abstract class WeaponBase : MonoBehaviour
     Character wielder;
     public Vector2 vectorOfAttack;
     [SerializeField] DirectionOfAttack attackDirection;
+
+    PoolManager poolManager;
 
     public void Awake()
     {
@@ -82,6 +84,11 @@ public abstract class WeaponBase : MonoBehaviour
         weaponStats = new WeaponStats(wd.stats);
     }
 
+    public void SetPoolManager(PoolManager poolManager)
+    {
+        this.poolManager = poolManager;
+    }
+
     public abstract void Attack();
 
     public int GetDamage()
@@ -136,9 +143,9 @@ public abstract class WeaponBase : MonoBehaviour
         vectorOfAttack = vectorOfAttack.normalized;
     }
 
-    public GameObject SpawnProjectile(GameObject projectilePrefab, Vector3 position)
+    public GameObject SpawnProjectile(PoolObjectData poolObjectData, Vector3 position)
     {
-        GameObject projectileGO = Instantiate(projectilePrefab);
+        GameObject projectileGO = poolManager.GetObject(poolObjectData);
         projectileGO.transform.position = position;
 
         Projectile projectile = projectileGO.GetComponent<Projectile>();
@@ -153,5 +160,6 @@ public abstract class WeaponBase : MonoBehaviour
 
         return projectileGO;
     }
+    
 }
 

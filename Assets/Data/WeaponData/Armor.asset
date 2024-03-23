@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb6bce819f283e1419e86ae429b15d17, type: 3}
-  m_Name: Test ARMOR
+  m_Name: Armor
   m_EditorClassIdentifier: 
   Name: Armor
   stats:

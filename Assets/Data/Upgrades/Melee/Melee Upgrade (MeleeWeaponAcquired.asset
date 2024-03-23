@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 2
   Name: MeleeWeaponAcquired
-  icon: {fileID: 21300000, guid: f77bffd77aa08874b90adb25096ef514, type: 3}
+  description: vvvbbb
+  icon: {fileID: 21300000, guid: 7909b37c07b4eb542bd47aa64987597f, type: 3}
   weaponData: {fileID: 11400000, guid: c02195049a7d68c4c824140dc055db4b, type: 2}
   weaponUpgradeStats:
     damage: 0
     timeToAttack: -0.5
     numberOfAttacks: 0
+    criticalChance: 0
+    numberOfHits: 0
+    projectileSpeed: 0
+    stun: 0
+    knockback: 0
+    knockbackTimeWeight: 0
   item: {fileID: 0}
   itemStats:
     armor: 0

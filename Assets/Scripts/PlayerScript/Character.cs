@@ -1,11 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public int maxHp = 1000;
-    public int currentHP = 1000;
+    public int maxHp = 2000;
+    public int currentHP = 2000;
 
     public int armor = 0;
 
@@ -23,6 +24,8 @@ public class Character : MonoBehaviour
     [HideInInspector] public Coins coins;
     private bool isDead;
     [SerializeField] DataContainer dataContainer;
+    [SerializeField] private AudioClip characterTakeDamageSoundClip;
+    [SerializeField] private AudioClip characterDeathSoundClip;
 
     PauseManager pauseManager;
     private void Awake()
@@ -33,8 +36,22 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
+        LoadSelectedCharacter(dataContainer.selectedCharacter);
+
         ApplyPersistantUpgrades();
         hpBar.SetState(currentHP, maxHp);
+    }
+
+    private void LoadSelectedCharacter(CharacterData selectedCharacter)
+    {
+        InitAnimation(selectedCharacter.spritePrefab);
+        GetComponent<WeaponManager>().AddWeapon(selectedCharacter.startingWeapon);
+    }
+
+    private void InitAnimation(GameObject spritePrefab)
+    {
+        GameObject animObject = Instantiate(spritePrefab, transform);
+        GetComponent<Animate>().SetAnimate(animObject);
     }
 
     private void ApplyPersistantUpgrades()
@@ -42,13 +59,13 @@ public class Character : MonoBehaviour
         int hpUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.HP);
 
         maxHp += maxHp / 10 * hpUpgradeLevel;
-        // currentHP += maxHp;
+        currentHP = maxHp;
 
         int damageUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Damage);
         damageBonus = 1f + 0.1f * damageUpgradeLevel;
 
         int regenerationUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Regeneration);
-        selfRegeneration += regenerationUpgradeLevel * 3;
+        selfRegeneration += regenerationUpgradeLevel * 5;
 
 
         int speedUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Speed);
@@ -60,6 +77,7 @@ public class Character : MonoBehaviour
 
         int criticalChanceUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.CriticalChance);
         CriticalChance += 0.05f * criticalChanceUpgradeLevel;
+        Debug.Log("Crit" + CriticalChance);
     }
 
     private void Update()
@@ -77,9 +95,14 @@ public class Character : MonoBehaviour
         if (isDead) return;
         ApplyArmor(ref damage);
 
+        if (damage > 0 && Time.frameCount % 10 == 0)
+        {
+            SFXManager.instance.PlaySoundFXClip(characterTakeDamageSoundClip, transform, 1f);
+        }
         currentHP -= damage;
         if (currentHP <= 0)
         {
+            SFXManager.instance.PlaySoundFXClip(characterDeathSoundClip, transform, 1f);
             GetComponent<CharacterGameOver>().GameOver();
             isDead = true;
             pauseManager.PauseGame();

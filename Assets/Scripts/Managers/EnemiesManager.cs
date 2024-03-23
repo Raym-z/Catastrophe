@@ -32,9 +32,8 @@ public class EnemiesSpawnGroup
 public class EnemiesManager : MonoBehaviour
 {
     [SerializeField] StagePorgress stageProgress;
-    [SerializeField] GameObject enemy;
-    [SerializeField] GameObject enemyBoss;
-    [SerializeField] GameObject enemyAnimation;
+    [SerializeField] PoolManager poolManager;
+    [SerializeField] EnemyData enemyBoss;
     [SerializeField] Vector2 spawnArea;
 
     GameObject player;
@@ -44,6 +43,8 @@ public class EnemiesManager : MonoBehaviour
     int currentBossHealth;
 
     [SerializeField] Slider bossHealthBar;
+    [SerializeField] GameObject bossHealthBackground;
+    [SerializeField] GameObject BossHealthOverlay;
 
     List<EnemiesSpawnGroup> enemiesSpawnGroupList;
     List<EnemiesSpawnGroup> repeatedSpawnGroupList;
@@ -117,6 +118,8 @@ public class EnemiesManager : MonoBehaviour
         if (currentBossHealth <= 0)
         {
             bossHealthBar.gameObject.SetActive(false);
+            bossHealthBackground.SetActive(false);
+            BossHealthOverlay.SetActive(false);
             bossEnemiesList.Clear();
         }
     }
@@ -140,11 +143,11 @@ public class EnemiesManager : MonoBehaviour
         GameObject newEnemy;
         if (isBoss == true)
         {
-            newEnemy = Instantiate(enemyBoss);
+            newEnemy = poolManager.GetObject(enemyBoss.poolObjectData);
         }
         else
         {
-            newEnemy = Instantiate(enemy);
+            newEnemy = poolManager.GetObject(enemyToSpawn.poolObjectData);
         }
         newEnemy.transform.position = position;
 
@@ -160,11 +163,6 @@ public class EnemiesManager : MonoBehaviour
         }
 
         newEnemy.transform.parent = transform;
-
-        // spawning animation object
-        newEnemyComponent.InitSprite(enemyToSpawn.animatedPrefab);
-
-
     }
 
     private void SpawnBossEnemy(Enemy newBoss)
@@ -176,6 +174,8 @@ public class EnemiesManager : MonoBehaviour
         totalBossHealth += newBoss.stats.hp;
 
         bossHealthBar.gameObject.SetActive(true);
+        bossHealthBackground.SetActive(true);
+        BossHealthOverlay.SetActive(true);
         bossHealthBar.maxValue = totalBossHealth;
     }
     public void AddRepeatedSpawn(StageEvent stageEvent, bool isBoss)

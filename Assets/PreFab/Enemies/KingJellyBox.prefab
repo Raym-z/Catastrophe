@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8426985500666095790}
   - component: {fileID: 6354435338860909320}
   - component: {fileID: 2793034092532678110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KingJellyBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +79,7 @@ MonoBehaviour:
     hp: 0
     damage: 0
     movementSpeed: 0
+  enemyData: {fileID: 11400000, guid: b8497fa843022044cbbaf8fee3bbbf06, type: 2}
 --- !u!114 &8426985500666095790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItemPrefab:
   - {fileID: 3382009998666356171, guid: 19982badba800d54bab1ef7f77aba497, type: 3}
-  chance: 0.546
+  chance: 1
 --- !u!114 &6354435338860909320
 MonoBehaviour:
   m_ObjectHideFlags: 0

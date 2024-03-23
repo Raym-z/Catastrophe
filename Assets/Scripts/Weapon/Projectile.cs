@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : MonoBehaviour, IPoolMember
 {
+    PoolMember poolMember;
     WeaponBase weapon;
     Vector3 direction;
     public float attackArea = 0.1f;
@@ -72,7 +73,7 @@ public class Projectile : MonoBehaviour
         }
         if (numOfHits <= 0)
         {
-            Destroy(gameObject);
+            DestroyProjectile();
         }
     }
 
@@ -89,10 +90,20 @@ public class Projectile : MonoBehaviour
         ttl -= Time.deltaTime;
         if (ttl < 0f)
         {
-            Destroy(gameObject);
+            DestroyProjectile();
         }
     }
-
+    private void DestroyProjectile()
+    {
+        if (poolMember == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            poolMember.ReturnToPool();
+        }
+    }
 
     private void Move()
     {
@@ -112,5 +123,15 @@ public class Projectile : MonoBehaviour
         criticalChance = weaponBase.GetCriticalChance();
         numOfHits = weaponBase.weaponStats.numberOfHits;
         speed = weaponBase.weaponStats.projectileSpeed;
+    }
+
+    private void OnEnable()
+    {
+        ttl = 6;
+    }
+
+    public void SetPoolMember(PoolMember poolMember)
+    {
+        this.poolMember = poolMember;
     }
 }

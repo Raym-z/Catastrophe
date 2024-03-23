@@ -10,7 +10,6 @@ public class UpgradeButton : MonoBehaviour
     public void Set(UpgradeData upgradeData)
     {
         icon.sprite = upgradeData.icon;
-        // Debug.Log($"Setting upgrade {upgradeData.Name}");
     }
 
     internal void Clean()

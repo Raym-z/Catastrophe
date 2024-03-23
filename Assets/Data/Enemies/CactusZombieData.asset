@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CactusZombieData
   m_EditorClassIdentifier: 
   Name: Cactus Zombie
-  animatedPrefab: {fileID: 2177117104708675493, guid: a80115f49efabbb408e665e5d02a1c4a, type: 3}
+  poolObjectData: {fileID: 11400000, guid: 997cbea4bb286924b84a401e774ea5a1, type: 2}
   stats:
     hp: 20
     damage: 10

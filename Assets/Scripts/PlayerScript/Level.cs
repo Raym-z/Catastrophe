@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class Level : MonoBehaviour
 {
     int experience = 0;
-    int level = 1;
+    public int level = 1;
 
     [SerializeField] EXPBar experienceBar;
     [SerializeField] UpgradePanelManager upgradePanel;
@@ -19,6 +20,8 @@ public class Level : MonoBehaviour
     WeaponManager weaponManager;
     PassiveItems passiveItems;
     [SerializeField] List<UpgradeData> upgradesAvailableOnStart;
+
+    [SerializeField] private AudioClip characterLevelUpSoundClip;
 
     private void Awake()
     {
@@ -95,6 +98,7 @@ public class Level : MonoBehaviour
 
     private void LevelUp()
     {
+        SFXManager.instance.PlaySoundFXClip(characterLevelUpSoundClip, transform, 1f);
         if (selectedUpgrades == null)
         {
             selectedUpgrades = new List<UpgradeData>();
@@ -122,6 +126,8 @@ public class Level : MonoBehaviour
     {
         ShuffleUpgrades();
         List<UpgradeData> upgradeList = new List<UpgradeData>();
+        List<int> History = new List<int>();
+        int x = -1;
 
         if (count > upgrades.Count)
         {
@@ -129,7 +135,12 @@ public class Level : MonoBehaviour
         }
         for (int i = 0; i < count; i++)
         {
-            upgradeList.Add(upgrades[UnityEngine.Random.Range(0, upgrades.Count)]);
+            while (History.Contains(x) || x == -1)
+            {
+                x = UnityEngine.Random.Range(0, upgrades.Count);
+            }
+            History.Add(x);
+            upgradeList.Add(upgrades[x]);
         }
         return upgradeList;
     }

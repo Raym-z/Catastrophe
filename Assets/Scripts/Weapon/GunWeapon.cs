@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunWeapon : WeaponBase
 {
-    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] PoolObjectData bulletPrefab;
     public override void Attack()
     {
         UpdateVectorOfAttack();

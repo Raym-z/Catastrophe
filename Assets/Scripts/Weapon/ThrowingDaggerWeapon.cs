@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThrowingDaggerWeapon : WeaponBase
 {
-    [SerializeField] GameObject ThrowingDaggerPrefab;
+    [SerializeField] PoolObjectData ThrowingDaggerPrefab;
     [SerializeField] float spread = 0.5f;
 
 

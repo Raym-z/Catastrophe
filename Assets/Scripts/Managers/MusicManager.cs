@@ -24,7 +24,7 @@ public class MusicManager : MonoBehaviour
     {
         if (interrupt)
         {
-            volume = 1f;
+            volume = 0.6f;
             audioSource.volume = volume;
             audioSource.clip = music;
             audioSource.Play();
@@ -40,7 +40,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] float timeToSwitch;
     IEnumerator SmoothSwitchMusic()
     {
-        volume = 1f;
+        volume = 0.6f;
         while (volume > 0)
         {
             volume -= Time.deltaTime / timeToSwitch;

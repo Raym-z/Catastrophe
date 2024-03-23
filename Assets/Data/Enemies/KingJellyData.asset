@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KingJellyData
   m_EditorClassIdentifier: 
   Name: Jellyfish
-  animatedPrefab: {fileID: 7182078483420395322, guid: 8d84e8e480c02be42a05aac952b1e2c1, type: 3}
+  poolObjectData: {fileID: 11400000, guid: 4ddaef511b76acf448d113415b453cfb, type: 2}
   stats:
     hp: 100
     damage: 50

@@ -14,12 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeType: 2
   Name: Unlock Throwing Dagger
+  description: aaaaaa
   icon: {fileID: 21300000, guid: 382f7dfb675f5a64387efd68b6ce3a3b, type: 3}
   weaponData: {fileID: 11400000, guid: 041e9a08060ab6949828b20e6b7a91e6, type: 2}
   weaponUpgradeStats:
     damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
+    criticalChance: 0
+    numberOfHits: 0
+    projectileSpeed: 0
+    stun: 0
+    knockback: 0
+    knockbackTimeWeight: 0
   item: {fileID: 0}
   itemStats:
     armor: 0

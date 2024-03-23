@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 2477794817162751410}
   - component: {fileID: 8404354295826627688}
   - component: {fileID: 8426985500666095790}
-  - component: {fileID: 6354435338860909320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +78,7 @@ MonoBehaviour:
     hp: 0
     damage: 0
     movementSpeed: 0
+  enemyData: {fileID: 0}
 --- !u!61 &8404354295826627688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,19 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItemPrefab:
   - {fileID: 3382009998666356171, guid: 19982badba800d54bab1ef7f77aba497, type: 3}
-  chance: 0.546
---- !u!114 &6354435338860909320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7816644946511833064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0980562a58cf2498b274a1ada5b68b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropItemPrefab:
   - {fileID: 6022522023268643972, guid: 6ca171edd5dc7a5409b5590502592dcc, type: 3}
   chance: 1

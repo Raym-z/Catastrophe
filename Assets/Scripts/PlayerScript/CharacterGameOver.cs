@@ -6,14 +6,11 @@ public class CharacterGameOver : MonoBehaviour
 {
     public GameObject gameOverPanel;
     [SerializeField] GameObject weaponParent;
-    PauseManager pauseManager;
-
 
     public void GameOver()
     {
-        Debug.Log("Game Over");
+        Time.timeScale = 0f;
         gameOverPanel.SetActive(true);
         weaponParent.SetActive(false);
-        pauseManager.PauseGame();
     }
 }

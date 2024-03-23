@@ -44,13 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f7d1504a538574896a69df4341bd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMove: {fileID: 0}
   weaponData: {fileID: 11400000, guid: 041e9a08060ab6949828b20e6b7a91e6, type: 2}
   weaponStats:
     damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
+    criticalChance: 0
+    numberOfHits: 0
+    projectileSpeed: 0
+    stun: 0
+    knockback: 0
+    knockbackTimeWeight: 0
   timer: 0
   vectorOfAttack: {x: 0, y: 0}
   attackDirection: 1
-  ThrowingDaggerPrefab: {fileID: 7658516870333021932, guid: a86f7f487eb73e347ad6b45a0cd63520, type: 3}
+  ThrowingDaggerPrefab: {fileID: 11400000, guid: 6875c844000f19042a26030d637988c9, type: 2}
   spread: 0.5

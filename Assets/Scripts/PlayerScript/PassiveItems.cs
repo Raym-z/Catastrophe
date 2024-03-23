@@ -12,10 +12,6 @@ public class PassiveItems : MonoBehaviour
     {
         character = GetComponent<Character>();
     }
-    private void Start()
-    {
-
-    }
 
     public void Equip(Item itemToEquip)
     {
@@ -29,11 +25,6 @@ public class PassiveItems : MonoBehaviour
 
         items.Add(newItemInstance);
         newItemInstance.Equip(character);
-    }
-
-    public void Unequip(Item itemToUnEquip)
-    {
-
     }
 
     internal void UpgradeItem(UpgradeData upgradeData)

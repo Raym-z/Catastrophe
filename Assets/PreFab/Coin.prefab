@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4202255445811051975}
   - component: {fileID: 7727864953214376218}
   - component: {fileID: 1270135981257785476}
-  - component: {fileID: 7001431872692911536}
   - component: {fileID: -7384979372402685504}
   - component: {fileID: 3731129223373267680}
+  - component: {fileID: -2437738269023839386}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -100,19 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c028385a58908f46a4880a24174320e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7001431872692911536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3382009998666356171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f434d6a9e06410f48a4715ce503f4f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 2
 --- !u!114 &-7384979372402685504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +147,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.054898877
+--- !u!114 &-2437738269023839386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3382009998666356171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f434d6a9e06410f48a4715ce503f4f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 2
+  coinPickupSoundClip: {fileID: 8300000, guid: 658bac1ce672a1248a137287b897e932, type: 3}
