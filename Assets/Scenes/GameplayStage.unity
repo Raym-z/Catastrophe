@@ -15545,7 +15545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressTimeRate: 10
-  progressPerSplit: 0.2
+  progressPerSplit: 0.3
 --- !u!1 &1872162737
 GameObject:
   m_ObjectHideFlags: 0
