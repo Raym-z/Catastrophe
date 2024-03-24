@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CactusZombieMiniBossData
   m_EditorClassIdentifier: 
   Name: Cactus Zombie (Mini Boss)
-  poolObjectData: {fileID: 11400000, guid: 997cbea4bb286924b84a401e774ea5a1, type: 2}
+  poolObjectData: {fileID: 11400000, guid: 682b0d5381334bc40886b3de458a8cfa, type: 2}
   stats:
     hp: 80
     damage: 10

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JellyFishMiniBossData
   m_EditorClassIdentifier: 
   Name: Jellyfish Mini Boss
-  poolObjectData: {fileID: 11400000, guid: 2e8140d9ec4774542b04dd57eafc3c2b, type: 2}
+  poolObjectData: {fileID: 11400000, guid: a54c736fa25c6234a9e2e676b64528ec, type: 2}
   stats:
     hp: 50
     damage: 10
