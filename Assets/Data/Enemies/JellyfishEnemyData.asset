@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Jellyfish
   poolObjectData: {fileID: 11400000, guid: 2e8140d9ec4774542b04dd57eafc3c2b, type: 2}
   stats:
-    hp: 10
+    hp: 5
     damage: 5
     movementSpeed: 6

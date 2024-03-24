@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14ed81feb912a8e4c873cfccd987092b, type: 3}
-  m_Name: Melee Upgrade (MeleeWeaponAcquired
+  m_Name: '[Upgrade] - Attack Speed'
   m_EditorClassIdentifier: 
-  upgradeType: 2
-  Name: MeleeWeaponAcquired
-  description: vvvbbb
-  icon: {fileID: 21300000, guid: 7909b37c07b4eb542bd47aa64987597f, type: 3}
-  weaponData: {fileID: 11400000, guid: c02195049a7d68c4c824140dc055db4b, type: 2}
+  upgradeType: 0
+  Name: '[Upgrade] - Attack Speed'
+  description: Increase shooting speed by 50%.
+  icon: {fileID: 21300000, guid: bc9565e2a10687943b195a4b7e3ce3e9, type: 3}
+  weaponData: {fileID: 11400000, guid: 1e6d090b93102fc41a6b6f1cbad34b5d, type: 2}
   weaponUpgradeStats:
     damage: 0
     timeToAttack: -0.5

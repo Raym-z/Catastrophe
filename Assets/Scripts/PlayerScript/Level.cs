@@ -134,7 +134,8 @@ public class Level : MonoBehaviour
 
         if (count > upgrades.Count)
         {
-            upgradeList.Add(defaultUpgrade);
+            // upgradeList.Add(defaultUpgrade);
+            count = upgrades.Count;
         }
         for (int i = 0; i < count; i++)
         {

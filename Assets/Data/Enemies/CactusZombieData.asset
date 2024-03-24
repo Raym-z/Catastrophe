@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Cactus Zombie
   poolObjectData: {fileID: 11400000, guid: 997cbea4bb286924b84a401e774ea5a1, type: 2}
   stats:
-    hp: 20
+    hp: 10
     damage: 10
     movementSpeed: 4

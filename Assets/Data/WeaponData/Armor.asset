@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Armor
   stats:
-    armor: 10
+    armor: 20
   upgrades:
   - {fileID: 11400000, guid: 577f5a1abbb0bf74c9ab0c1f1554c56c, type: 2}

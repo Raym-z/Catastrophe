@@ -20,8 +20,8 @@ MonoBehaviour:
     objectToSpawn: {fileID: 0}
     count: 2
     isRepeatedEvent: 1
-    repeatEverySeconds: 5
-    repeatCount: 12
+    repeatEverySeconds: 12
+    repeatCount: 5
   - eventType: 0
     time: 3
     message: 
@@ -38,8 +38,8 @@ MonoBehaviour:
     objectToSpawn: {fileID: 0}
     count: 2
     isRepeatedEvent: 1
-    repeatEverySeconds: 5
-    repeatCount: 6
+    repeatEverySeconds: 8
+    repeatCount: 4
   - eventType: 2
     time: 60
     message: 
@@ -65,8 +65,8 @@ MonoBehaviour:
     objectToSpawn: {fileID: 0}
     count: 5
     isRepeatedEvent: 1
-    repeatEverySeconds: 5
-    repeatCount: 10
+    repeatEverySeconds: 12
+    repeatCount: 5
   - eventType: 0
     time: 70
     message: 
@@ -74,8 +74,8 @@ MonoBehaviour:
     objectToSpawn: {fileID: 0}
     count: 3
     isRepeatedEvent: 1
-    repeatEverySeconds: 5
-    repeatCount: 12
+    repeatEverySeconds: 10
+    repeatCount: 6
   - eventType: 0
     time: 80
     message: 
@@ -84,7 +84,7 @@ MonoBehaviour:
     count: 2
     isRepeatedEvent: 1
     repeatEverySeconds: 15
-    repeatCount: 4
+    repeatCount: 2
   - eventType: 0
     time: 150
     message: 
@@ -103,6 +103,15 @@ MonoBehaviour:
     isRepeatedEvent: 1
     repeatEverySeconds: 10
     repeatCount: 6
+  - eventType: 0
+    time: 150
+    message: 
+    enemyToSpawn: {fileID: 11400000, guid: 043276345f4543840811afeed389fa82, type: 2}
+    objectToSpawn: {fileID: 0}
+    count: 5
+    isRepeatedEvent: 1
+    repeatEverySeconds: 10
+    repeatCount: 10
   - eventType: 0
     time: 200
     message: 

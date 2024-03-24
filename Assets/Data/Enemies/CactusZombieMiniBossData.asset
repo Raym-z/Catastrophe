@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: Cactus Zombie (Mini Boss)
   poolObjectData: {fileID: 11400000, guid: 997cbea4bb286924b84a401e774ea5a1, type: 2}
   stats:
-    hp: 100
-    damage: 20
-    movementSpeed: 8
+    hp: 80
+    damage: 10
+    movementSpeed: 7

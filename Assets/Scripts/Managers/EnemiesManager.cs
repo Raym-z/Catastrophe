@@ -49,11 +49,14 @@ public class EnemiesManager : MonoBehaviour
     List<EnemiesSpawnGroup> enemiesSpawnGroupList;
     List<EnemiesSpawnGroup> repeatedSpawnGroupList;
 
+    PlayerWinManager playerWinManager;
+
     int spawnPerFrame = 2;
     private void Start()
     {
         player = GameManager.instance.playerTransform.gameObject;
         bossHealthBar = FindObjectOfType<BossHPBar>(true).GetComponent<Slider>();
+        playerWinManager = FindObjectOfType<PlayerWinManager>();
         stageProgress = FindObjectOfType<StageProgress>();
     }
     // 
@@ -121,6 +124,7 @@ public class EnemiesManager : MonoBehaviour
             bossHealthBackground.SetActive(false);
             BossHealthOverlay.SetActive(false);
             bossEnemiesList.Clear();
+            playerWinManager.Win();
         }
     }
 

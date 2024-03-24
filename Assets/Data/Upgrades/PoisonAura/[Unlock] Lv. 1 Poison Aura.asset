@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14ed81feb912a8e4c873cfccd987092b, type: 3}
-  m_Name: PoisonAura(ExtraDamage)
+  m_Name: '[Unlock] Lv. 1 Poison Aura'
   m_EditorClassIdentifier: 
-  upgradeType: 0
-  Name: Extra Damage
-  description: 
+  upgradeType: 2
+  Name: '[Unlock] Lv. 1 Poison Aura'
+  description: A circle of poison surrounding you
   icon: {fileID: 21300000, guid: bc9565e2a10687943b195a4b7e3ce3e9, type: 3}
   weaponData: {fileID: 11400000, guid: 1e6d090b93102fc41a6b6f1cbad34b5d, type: 2}
   weaponUpgradeStats:
-    damage: 10
+    damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
     criticalChance: 0

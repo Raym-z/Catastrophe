@@ -36,6 +36,11 @@ public class Projectile : MonoBehaviour, IPoolMember
 
         }
     }
+
+    private void Start()
+    {
+        if (enemiesHit == null) { enemiesHit = new List<IDamageable>(); }
+    }
     void Update()
     {
         Move();
@@ -75,6 +80,7 @@ public class Projectile : MonoBehaviour, IPoolMember
             }
             else
             {
+                enemiesHit.Clear();
                 break;
             }
         }
@@ -86,8 +92,6 @@ public class Projectile : MonoBehaviour, IPoolMember
 
     private bool CheckRepeatHit(IDamageable enemy)
     {
-        if (enemiesHit == null) { enemiesHit = new List<IDamageable>(); }
-
         return enemiesHit.Contains(enemy);
     }
 
@@ -97,8 +101,8 @@ public class Projectile : MonoBehaviour, IPoolMember
         ttl -= Time.deltaTime;
         if (ttl < 0f)
         {
-            DestroyProjectile();
             enemiesHit.Clear();
+            DestroyProjectile();
         }
     }
     private void DestroyProjectile()

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Garlick
   stats:
-    damage: 5
+    damage: 10
     timeToAttack: 1
     numberOfAttacks: 0
-    criticalChance: 0
+    criticalChance: 0.2
     numberOfHits: 0
     projectileSpeed: 0
-    stun: 0
+    stun: 0.1
     knockback: 0
     knockbackTimeWeight: 0
   weaponBasePrefab: {fileID: 753988439953606123, guid: 677e6361318373b45a4327f32d1ed81e, type: 3}

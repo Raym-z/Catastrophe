@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: ThrowingDagger
   stats:
-    damage: 10
+    damage: 15
     timeToAttack: 1
     numberOfAttacks: 1
-    criticalChance: 0
+    criticalChance: 0.1
     numberOfHits: 1
     projectileSpeed: 25
     stun: 0

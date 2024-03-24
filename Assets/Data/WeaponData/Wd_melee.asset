@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Melee
   stats:
-    damage: 10
+    damage: 20
     timeToAttack: 4
     numberOfAttacks: 1
     criticalChance: 0

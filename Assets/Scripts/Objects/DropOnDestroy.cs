@@ -1,36 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+[Serializable]
+public class DropItem
+{
+    public GameObject itemPrefab;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float chance = 1f;
+
+    public float Chance => chance;
+}
 
 public class DropOnDestroy : MonoBehaviour
 {
-    [SerializeField] List<GameObject> dropItemPrefab;
-    [SerializeField][Range(0f, 1f)] float chance = 1f;
+    [SerializeField]
+    private List<DropItem> dropItemPrefab = new List<DropItem>();
 
     private void OnDestroy()
     {
-        // check if game is still on  going
         if (GameManager.instance == null) return;
         CheckDrop();
     }
+
     public void CheckDrop()
     {
         if (dropItemPrefab.Count <= 0)
         {
-            Debug.LogWarning("List of drop item is empty.");
+            Debug.LogWarning("List of drop items is empty.");
             return;
         }
 
-        if (Random.value < chance)
+        foreach (DropItem dropItem in dropItemPrefab)
         {
-            GameObject toDrop = dropItemPrefab[Random.Range(0, dropItemPrefab.Count)];
-
-            if (toDrop == null)
+            if (UnityEngine.Random.value < dropItem.Chance)
             {
-                Debug.LogWarning("DropOnDestroy: reference to dropItemPrefab is null.");
-                return;
+                GameObject toDrop = dropItem.itemPrefab;
+
+                if (toDrop == null)
+                {
+                    Debug.LogWarning("DropOnDestroy: reference to dropItemPrefab is null.");
+                    return;
+                }
+                SpawnManager.instance.SpawnObject(transform.position, toDrop);
             }
-            SpawnManager.instance.SpawnObject(transform.position, toDrop);
         }
     }
 }

@@ -137,6 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropItemPrefab:
-  - {fileID: 3382009998666356171, guid: 19982badba800d54bab1ef7f77aba497, type: 3}
-  - {fileID: 6022522023268643972, guid: 6ca171edd5dc7a5409b5590502592dcc, type: 3}
-  chance: 1
+  - itemPrefab: {fileID: 6022522023268643972, guid: 6ca171edd5dc7a5409b5590502592dcc, type: 3}
+    chance: 1
+  - itemPrefab: {fileID: 3382009998666356171, guid: 19982badba800d54bab1ef7f77aba497, type: 3}
+    chance: 0.5
+  - itemPrefab: {fileID: 659528992976082784, guid: 4a208e347505f8f49b1c7687033e9255, type: 3}
+    chance: 0.2

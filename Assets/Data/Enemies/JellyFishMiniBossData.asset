@@ -16,5 +16,5 @@ MonoBehaviour:
   poolObjectData: {fileID: 11400000, guid: 2e8140d9ec4774542b04dd57eafc3c2b, type: 2}
   stats:
     hp: 50
-    damage: 20
+    damage: 10
     movementSpeed: 7
