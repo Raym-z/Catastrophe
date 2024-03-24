@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a8ed0e7ca3cb84997b1246cb634b77, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  coins: 68
+  coins: 0
   stageCompletion: 
   upgrades:
   - persistentUpgrades: 0
@@ -45,9 +45,4 @@ MonoBehaviour:
     max_level: 10
     costToUpgrade: 100
     description: Increase critical chance by 5% per level.
-  - persistentUpgrades: 5
-    level: 0
-    max_level: 1
-    costToUpgrade: 0
-    description: Heal when killing an enemy
   selectedCharacter: {fileID: 11400000, guid: 5a967d2a98d594f41b42ef9df66fbef1, type: 2}

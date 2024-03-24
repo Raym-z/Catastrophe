@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
     {
         level = GetComponent<Level>();
         coins = GetComponent<Coins>();
+        pauseManager = FindObjectOfType<PauseManager>();
     }
 
     private void Start()
@@ -106,7 +107,6 @@ public class Character : MonoBehaviour
             GetComponent<CharacterGameOver>().GameOver();
             isDead = true;
             pauseManager.PauseGame();
-
         }
         hpBar.SetState(currentHP, maxHp);
     }
