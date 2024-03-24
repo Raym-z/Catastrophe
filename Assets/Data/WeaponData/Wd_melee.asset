@@ -23,8 +23,11 @@ MonoBehaviour:
     stun: 0
     knockback: 0
     knockbackTimeWeight: 0
+    lifeSteal: 0
   weaponBasePrefab: {fileID: 6712023029159122275, guid: fed13a0c6c192224a8ddae1dd386ec84, type: 3}
   upgrades:
   - {fileID: 11400000, guid: 1fc4b59d1048da84e8a96e79aecb62ce, type: 2}
   - {fileID: 11400000, guid: 1a5b3545a65c5b34b8e6ba4358aefeb8, type: 2}
   - {fileID: 11400000, guid: 8a66bfedf15b740449c7f4c670ec4a96, type: 2}
+  - {fileID: 11400000, guid: 72c5082e95550e544b8d079a073c664e, type: 2}
+  - {fileID: 11400000, guid: 993308af768d1d34bab5a3424a7bfaa6, type: 2}

@@ -67,6 +67,12 @@ public abstract class WeaponBase : MonoBehaviour
         PostDamage(damage, position, crit);
         temp.TakeDamage(damage);
         ApplyAddiotionalEffect(temp, position);
+        ApplyLifeSteal();
+    }
+
+    public void ApplyLifeSteal()
+    {
+        wielder.Heal(weaponStats.lifeSteal);
     }
 
 
