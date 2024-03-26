@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973629df9eccdea4989d452195b10d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackArea: 0.1
+  attackArea: 0.2
   criticalChance: 0

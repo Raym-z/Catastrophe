@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a8ed0e7ca3cb84997b1246cb634b77, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  coins: 0
+  coins: 50
   stageCompletion: 
   upgrades:
   - persistentUpgrades: 0

@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour, IPoolMember
     PoolMember poolMember;
     WeaponBase weapon;
     Vector3 direction;
-    public float attackArea = 0.1f;
+    public float attackArea = 0.2f;
     float speed;
     int damage;
     int numOfHits = 1;
@@ -17,6 +17,13 @@ public class Projectile : MonoBehaviour, IPoolMember
     List<IDamageable> enemiesHit;
 
     float ttl = 6f;
+
+    // Onselect show a circle around the projectile
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackArea);
+    }
 
     public void SetDirection(float dir_x, float dir_y)
     {
@@ -57,7 +64,7 @@ public class Projectile : MonoBehaviour, IPoolMember
         Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, attackArea);
         foreach (Collider2D c in hit)
         {
-            if (numOfHits > 0)
+            if (numOfHits > 1)
             {
                 IDamageable enemy = c.GetComponent<IDamageable>();
                 if (enemy != null)
@@ -75,18 +82,29 @@ public class Projectile : MonoBehaviour, IPoolMember
                         enemiesHit.Add(enemy);
                         numOfHits -= 1;
                     }
-
                 }
             }
-            else
+            else if (numOfHits == 1)
+            {
+                IDamageable enemy = c.GetComponent<IDamageable>();
+                if (enemy != null)
+                {
+                    crit = false;
+                    float random = Random.Range(0, 1);
+                    if (random < criticalChance)
+                    {
+                        damage = (int)(damage * 2);
+                        crit = true;
+                    }
+                    weapon.ApplyDamage(c.transform.position, damage, enemy, crit);
+                    numOfHits -= 1;
+                }
+            }
+            if (numOfHits <= 0)
             {
                 enemiesHit.Clear();
-                break;
+                DestroyProjectile();
             }
-        }
-        if (numOfHits <= 0)
-        {
-            DestroyProjectile();
         }
     }
 
