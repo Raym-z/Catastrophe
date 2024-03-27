@@ -27,7 +27,7 @@ public class PlayerUpgradeUIElement : MonoBehaviour
         if (playerUpgrades.level >= playerUpgrades.max_level) { Debug.Log("Already Maxed"); return; }
         if (playerUpgrades.level == 0)
         {
-            if (dataContainer.coins > 50)
+            if (dataContainer.coins >= 50)
             {
                 dataContainer.coins -= 50;
                 playerUpgrades.level += 1;

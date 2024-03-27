@@ -4193,7 +4193,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 24.299217, y: 14.961809}
+    - - {x: 24.237701, y: 0.6962147}
+      - {x: 24.299217, y: 14.961809}
       - {x: 23.276505, y: 14.953169}
       - {x: 23.275291, y: 14.957115}
       - {x: 18.667725, y: 14.95372}
@@ -4205,12 +4206,7 @@ PolygonCollider2D:
       - {x: -9.755432, y: 1.3126736}
       - {x: -9.785393, y: 1.9559631}
       - {x: -10.845199, y: 1.9811847}
-      - {x: -10.818932, y: 0.43798542}
-      - {x: -0.23501724, y: 0.3346063}
-      - {x: 2.4712143, y: 0.33742142}
-      - {x: 23.689491, y: 0.37059402}
-      - {x: 24.259117, y: 0.36479473}
-      - {x: 24.265137, y: 1.3231753}
+      - {x: -10.88665, y: 0.6951809}
   m_UseDelaunayMesh: 0
 --- !u!1 &483616252
 GameObject:
@@ -5078,7 +5074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -275.0004, y: 0.2998352}
+  m_AnchoredPosition: {x: -280.9, y: 0.39999962}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576111135
@@ -15319,7 +15315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7b5b24510f1d34bb26b4350183f4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageData: {fileID: 11400000, guid: 5e938dd5ade38f6429cbf8685755c012, type: 2}
+  stageData: {fileID: 11400000, guid: 876c3bb2e7bf03143a88f09f2eec3f72, type: 2}
   enemiesManager: {fileID: 2073396315}
 --- !u!114 &1864943083
 MonoBehaviour:
