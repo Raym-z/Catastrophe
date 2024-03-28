@@ -42,6 +42,8 @@ public class UpgradePanelManager : MonoBehaviour
         for (int i = 0; i < upgradeDatas.Count; i++)
         {
             upgradeButtons[i].gameObject.SetActive(true);
+            upgradeDescriptions[i].gameObject.SetActive(true);
+            upgradeNames[i].gameObject.SetActive(true);
             upgradeButtons[i].Set(upgradeDatas[i]);
             ShowDescription(i);
         }
@@ -52,6 +54,8 @@ public class UpgradePanelManager : MonoBehaviour
         for (int i = 0; i < upgradeButtons.Count; i++)
         {
             upgradeButtons[i].Clean();
+            upgradeDescriptions[i].text = "";
+            upgradeNames[i].text = "";
         }
     }
 
@@ -79,6 +83,8 @@ public class UpgradePanelManager : MonoBehaviour
         for (int i = 0; i < upgradeButtons.Count; i++)
         {
             upgradeButtons[i].gameObject.SetActive(false);
+            upgradeDescriptions[i].gameObject.SetActive(false);
+            upgradeNames[i].gameObject.SetActive(false);
         }
     }
 
