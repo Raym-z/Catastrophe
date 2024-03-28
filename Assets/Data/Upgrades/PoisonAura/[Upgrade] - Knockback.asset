@@ -26,7 +26,8 @@ MonoBehaviour:
     projectileSpeed: 0
     stun: 0
     knockback: 2
-    knockbackTimeWeight: 2
+    knockbackTimeWeight: 5
+    lifeSteal: 0
   item: {fileID: 0}
   itemStats:
     armor: 1

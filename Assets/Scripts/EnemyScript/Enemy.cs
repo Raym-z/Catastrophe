@@ -81,7 +81,11 @@ public class Enemy : MonoBehaviour, IDamageable, IPoolMember
 
     private void Move()
     {
-        if (stunned > 0f) { return; }
+        if (stunned > 0f)
+        {
+            rgdbd2d.velocity = UnityEngine.Vector2.zero;
+            return;
+        }
         UnityEngine.Vector3 direction = (targetDestination.position - transform.position).normalized;
         rgdbd2d.velocity = CalculateMovementVelocity(direction) + CalculateKnockback();
     }
@@ -144,7 +148,7 @@ public class Enemy : MonoBehaviour, IDamageable, IPoolMember
         GetComponent<DropOnDestroy>().CheckDrop();
         if (poolMember != null)
         {
-            
+
             poolMember.ReturnToPool();
         }
         else

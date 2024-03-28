@@ -68,9 +68,7 @@ public class Character : MonoBehaviour
         int regenerationUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Regeneration);
         selfRegeneration += regenerationUpgradeLevel * 5;
 
-
         int speedUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Speed);
-        // GetComponent<Movement>().speed += speedUpgradeLevel/2;
         GetComponent<Movement>().speed += speedUpgradeLevel / 2;
 
         int armorUpgradeLevel = dataContainer.GetUpgradeLevel(PlayerPersistentUpgrades.Armor);

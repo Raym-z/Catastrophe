@@ -20,7 +20,7 @@ MonoBehaviour:
     criticalChance: 0.2
     numberOfHits: 0
     projectileSpeed: 0
-    stun: 0.1
+    stun: 0
     knockback: 0
     knockbackTimeWeight: 0
     lifeSteal: 0
@@ -28,7 +28,6 @@ MonoBehaviour:
   upgrades:
   - {fileID: 11400000, guid: 01c7d552fb8190641ae0a40176d34f5c, type: 2}
   - {fileID: 11400000, guid: eb0c53f033c9b4c4e81cbc6412e4cd58, type: 2}
-  - {fileID: 11400000, guid: 25d3b769fa9c7394bb46a120065a28a9, type: 2}
   - {fileID: 11400000, guid: 0e31e3fdb4161674aa8cac2b6bb76289, type: 2}
   - {fileID: 11400000, guid: 82e39c0d032375b4fac39d8f80949932, type: 2}
   - {fileID: 11400000, guid: f7d6f6834a5cc1541b0a0f50ea2d6af6, type: 2}

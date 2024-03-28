@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ExitToMenu : MonoBehaviour
+public class CloseStore : MonoBehaviour
 {
+    [SerializeField] GameObject storePanel;
     SaveManager saveManager;
-
     private void Start()
     {
         saveManager = FindObjectOfType<SaveManager>();
     }
-    public void BackToMenu()
+    public void CloseStorePanel()
     {
-        Debug.Log("Back to Menu");
+        storePanel.SetActive(false);
         saveManager.SaveGame();
-        SceneManager.LoadScene("MainMenu");
     }
 }

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 19884330}
   - component: {fileID: 19884329}
   - component: {fileID: 19884328}
+  - component: {fileID: 19884331}
   m_Layer: 5
   m_Name: Close Button
   m_TagString: Untagged
@@ -206,10 +207,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1938606870}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 19884331}
+        m_TargetAssemblyTypeName: CloseStore, Assembly-CSharp
+        m_MethodName: CloseStorePanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -256,6 +257,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19884326}
   m_CullTransparentMesh: 1
+--- !u!114 &19884331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19884326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100b3f1b1e27bc5418fafab81b00f08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storePanel: {fileID: 1938606870}
 --- !u!1 &27127520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6992,6 +7006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3466b4c5e1fe9b048bc6b62e3890c267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataContainer: {fileID: 11400000, guid: 917216a4c631187498b76793d6bdaecf, type: 2}
 --- !u!114 &1442792677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8439,6 +8454,7 @@ GameObject:
   - component: {fileID: 1794124047}
   - component: {fileID: 1794124049}
   - component: {fileID: 1794124048}
+  - component: {fileID: 1794124050}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -8503,6 +8519,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794124046}
   m_CullTransparentMesh: 1
+--- !u!114 &1794124050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794124046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221f156f46de60f48a7a6654874fd25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataContainer: {fileID: 11400000, guid: 917216a4c631187498b76793d6bdaecf, type: 2}
 --- !u!1 &1834246974
 GameObject:
   m_ObjectHideFlags: 0

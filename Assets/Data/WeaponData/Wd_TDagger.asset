@@ -27,7 +27,6 @@ MonoBehaviour:
   weaponBasePrefab: {fileID: 5546099500150503032, guid: 4d818294b334f45429c1c70f563c03ee, type: 3}
   upgrades:
   - {fileID: 11400000, guid: d877fd9b9bfe4f7468ce5d9a9817f3d6, type: 2}
-  - {fileID: 11400000, guid: 347c002636d81434aa4e4a8fdd388b36, type: 2}
   - {fileID: 11400000, guid: cdfe1ddc439fc9049bc62b255ecf4aee, type: 2}
   - {fileID: 11400000, guid: 1f4a6e0df6cbbdc4d89572ebed2e35d9, type: 2}
   - {fileID: 11400000, guid: 0c875387df2c7aa4eae95e00f81952e7, type: 2}

@@ -9,7 +9,7 @@ public class HealPickUpObject : MonoBehaviour, IPickUpObject
 
     public void OnPickUp(Character character)
     {
-        SFXManager.instance.PlaySoundFXClip(healSoundClip, transform, 1f);
+        // SFXManager.instance.PlaySoundFXClip(healSoundClip, transform, 1f);
         character.Heal(healAmount);
     }
 }

@@ -18,7 +18,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: cd427f2590e303b4a9d9a5f1f40b5a3c, type: 3}
   weaponData: {fileID: 11400000, guid: f7dc8eb62389881498e3c65ba767eaae, type: 2}
   weaponUpgradeStats:
-    damage: 10
+    damage: 0
     timeToAttack: 0
     numberOfAttacks: 0
     criticalChance: 0.3
@@ -27,6 +27,7 @@ MonoBehaviour:
     stun: 0
     knockback: 0
     knockbackTimeWeight: 0
+    lifeSteal: 0
   item: {fileID: 0}
   itemStats:
     armor: 0

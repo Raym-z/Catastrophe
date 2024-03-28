@@ -56,8 +56,9 @@ MonoBehaviour:
     stun: 0
     knockback: 0
     knockbackTimeWeight: 0
+    lifeSteal: 0
   timer: 0
   vectorOfAttack: {x: 0, y: 0}
   attackDirection: 1
   ThrowingDaggerPrefab: {fileID: 11400000, guid: 6875c844000f19042a26030d637988c9, type: 2}
-  spread: 0.5
+  spread: 0.8

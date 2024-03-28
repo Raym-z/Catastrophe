@@ -17,9 +17,9 @@ MonoBehaviour:
     damage: 10
     timeToAttack: 1
     numberOfAttacks: 1
-    criticalChance: 0
+    criticalChance: 0.1
     numberOfHits: 1
-    projectileSpeed: 35
+    projectileSpeed: 25
     stun: 0
     knockback: 0
     knockbackTimeWeight: 0
@@ -28,6 +28,5 @@ MonoBehaviour:
   upgrades:
   - {fileID: 11400000, guid: 2e56ba56bbe12b14fbffedd60cb6fdf4, type: 2}
   - {fileID: 11400000, guid: 748b4ee2c2a24f94dbcd5e4826aba2ba, type: 2}
-  - {fileID: 11400000, guid: f1c4ab19fa554ca48b0e4f8908233d10, type: 2}
   - {fileID: 11400000, guid: 4cde45927ddfa1a44872c2fcf6771da7, type: 2}
   - {fileID: 11400000, guid: 7ac5b6cdfe589044ab108d3466fe66ff, type: 2}

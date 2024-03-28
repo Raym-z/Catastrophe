@@ -1,18 +1,28 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitButton : MonoBehaviour
+public class SaveManager : MonoBehaviour
 {
+    public DataContainer dataContainer;
 
-    [SerializeField] DataContainer dataContainer;
-    public void QuitApplication()
+    private void Awake()
     {
-        SaveGame();
-        Debug.Log("Quiting Application");
-        Application.Quit();
+        // PlayerPrefs.DeleteAll();
+        LoadGame();
     }
+
+    public void LoadGame()
+    {
+        // Load coins
+        dataContainer.coins = PlayerPrefs.GetInt("Coins", 0);
+
+        foreach (PlayerUpgrades upgrade in dataContainer.upgrades)
+        {
+            upgrade.level = PlayerPrefs.GetInt("Upgrade_" + upgrade.persistentUpgrades.ToString() + "_Level", 0);
+        }
+    }
+
 
     public void SaveGame()
     {
@@ -33,3 +43,5 @@ public class ExitButton : MonoBehaviour
         Debug.Log("Game saved!");
     }
 }
+
+
