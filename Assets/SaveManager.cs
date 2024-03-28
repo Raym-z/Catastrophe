@@ -12,6 +12,11 @@ public class SaveManager : MonoBehaviour
         LoadGame();
     }
 
+    private void OnApplicationQuit()
+    {
+        SaveGame();
+    }
+
     public void LoadGame()
     {
         // Load coins
