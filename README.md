@@ -13,28 +13,24 @@
 <br>
 <hr>
 
-"Darn it, it's a CATastrophe!"
-Catastrophe: Last Cat Standing! - is a game that blends chaos and fun purr-fectly altogether!
-
-A roguelike time survival RPG game with minimalistic gameplay akin to Vampire Survivors is here!
-
-In this wild desert adventure, the portrayed fearless feline will be guided by you through a world of sands overrun by mischievous monsters. Stay quick on your paws and survive as long as you can!
-
-Now, can you make sure he paw-er through this catastrophe?
-
-
-
-Available for Windows and Linux 💻
+<h1>"Darn it, it's a CATastrophe!"</h1>
+    <p>Catastrophe: Last Cat Standing! - A game that blends chaos and fun <em>purr-fectly</em> altogether!</p>
+    <p>A roguelike time survival RPG game with minimalistic gameplay akin to <em>Vampire Survivors</em> is here!</p>
+    <p>In this wild desert adventure, the portrayed fearless feline will be guided by you through a world of sands overrun by mischievous monsters. Stay quick on your paws and survive as long as you can!</p>
+    <p>Now, can you make sure he <em>paw-er</em> through this catastrophe?</p>
+    <p>Available for Windows and Linux 💻</p>
+    <hr>
 
 
 
-✦ Credits: 
-
-Game Artist: prigilta & jellyfloosh
-Game Designer: scyfize & tokkio__o
-Game Programmer: Raymm & no_name_08
-Sound Engineer: -
-Team Manager: Chrisnathan1104
+ <h3>✦ Credits:</h3>
+    <ul>
+        <li><strong>Game Artist:</strong> prigilta & jellyfloosh</li>
+        <li><strong>Game Designer:</strong> scyfize & tokkio__o</li>
+        <li><strong>Game Programmer:</strong> Raymm & no_name_08</li>
+        <li><strong>Sound Engineer:</strong> -</li>
+        <li><strong>Team Manager:</strong> Chrisnathan1104</li>
+    </ul>
 
 <hr>
 <div align="left" class=""><a href="#top">⬆ Return</a></div>
